@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project firstLayout="">
+    <gdVersion build="92" major="4" minor="0" revision="0" />
+    <properties folderProject="false" linuxExecutableFilename="" macExecutableFilename="" packageName="com.example.gamename" useExternalSourceFiles="false" winExecutableFilename="" winExecutableIconFile="">
+        <name>Project</name>
+        <author></author>
+        <windowWidth>800</windowWidth>
+        <windowHeight>600</windowHeight>
+        <latestCompilationDirectory></latestCompilationDirectory>
+        <maxFPS>60</maxFPS>
+        <minFPS>10</minFPS>
+        <verticalSync>false</verticalSync>
+        <extensions>
+            <extension name="BuiltinObject" />
+            <extension name="BuiltinAudio" />
+            <extension name="BuiltinVariables" />
+            <extension name="BuiltinTime" />
+            <extension name="BuiltinMouse" />
+            <extension name="BuiltinKeyboard" />
+            <extension name="BuiltinJoystick" />
+            <extension name="BuiltinCamera" />
+            <extension name="BuiltinWindow" />
+            <extension name="BuiltinFile" />
+            <extension name="BuiltinNetwork" />
+            <extension name="BuiltinScene" />
+            <extension name="BuiltinAdvanced" />
+            <extension name="Sprite" />
+            <extension name="BuiltinCommonInstructions" />
+            <extension name="BuiltinCommonConversions" />
+            <extension name="BuiltinStringInstructions" />
+            <extension name="BuiltinMathematicalTools" />
+            <extension name="BuiltinExternalLayouts" />
+            <extension name="TiledSpriteObject" />
+            <extension name="PlatformBehavior" />
+        </extensions>
+        <platforms>
+            <platform name="GDevelop JS platform" />
+        </platforms>
+        <currentPlatform>GDevelop JS platform</currentPlatform>
+    </properties>
+    <resources>
+        <resources>
+            <resource alwaysLoaded="false" file="assets/bridgeLogs.png" kind="image" name="bridgeLogs.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="assets/bush.png" kind="image" name="bush.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/cloud2.png" kind="image" name="cloud2.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/coinGold.png" kind="image" name="coinGold.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="assets/Grass.png" kind="image" name="Grass.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/grassHalfMid.png" kind="image" name="grassHalfMid.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/Left.png" kind="image" name="Left.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/p1_jump.png" kind="image" name="p1_jump.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/p1_stand.png" kind="image" name="p1_stand.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/p1_walk03.png" kind="image" name="p1_walk03.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="assets/p1_walk04.png" kind="image" name="p1_walk04.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/p1_walk05.png" kind="image" name="p1_walk05.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/p1_walk06.png" kind="image" name="p1_walk06.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="assets/p1_walk07.png" kind="image" name="p1_walk07.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="assets/Right.png" kind="image" name="Right.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="assets/slimeWalk1.png" kind="image" name="slimeWalk1.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="assets/slimeWalk2.png" kind="image" name="slimeWalk2.png" smoothed="true" userAdded="false" />
+        </resources>
+        <resourceFolders />
+    </resources>
+    <objects />
+    <objectsGroups />
+    <variables />
+    <layouts>
+        <layout b="204" disableInputWhenNotFocused="true" mangledName="main" name="main" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="79" standardSortMethod="false" stopSoundsOnStartup="true" title="" v="155">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="0.933380" />
+            <objectsGroups />
+            <variables />
+            <instances>
+                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="false" name="platform" width="844.000000" x="-32.999969" y="489.000000" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="player" width="0.000000" x="51.573990" y="288.712280" zOrder="2">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+            </instances>
+            <objects>
+                <object height="32.000000" name="platform" texture="grassHalfMid.png" type="TiledSpriteObject::TiledSprite" width="32.000000">
+                    <variables />
+                    <behaviors>
+                        <behavior canBeGrabbed="true" name="Platform" platformType="NormalPlatform" type="PlatformBehavior::PlatformBehavior" yGrabOffset="0.000000" />
+                    </behaviors>
+                </object>
+                <object name="player" type="Sprite">
+                    <variables />
+                    <behaviors>
+                        <behavior acceleration="1500.000000" canGrabPlatforms="false" deceleration="1500.000000" gravity="1000.000000" ignoreDefaultControls="false" jumpSpeed="600.000000" maxFallingSpeed="700.000000" maxSpeed="250.000000" name="PlatformerObject" slopeMaxAngle="60.000000" type="PlatformBehavior::PlatformerObjectBehavior" xGrabTolerance="10.000000" yGrabOffset="0.000000" />
+                    </behaviors>
+                    <animations>
+                        <animation name="Idle" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="p1_stand.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="36.000000" y="46.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="92.000000" />
+                                                    <vertice x="0.000000" y="92.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                        <animation name="Jump" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="p1_jump.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="36.000000" y="47.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="94.000000" />
+                                                    <vertice x="0.000000" y="94.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                        <animation name="Walk" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="true" timeBetweenFrames="0.050000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="p1_walk03.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="36.000000" y="48.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="97.000000" />
+                                                    <vertice x="0.000000" y="97.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                        <sprite hasCustomCollisionMask="false" image="p1_walk04.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="36.000000" y="48.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="97.000000" />
+                                                    <vertice x="0.000000" y="97.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                        <sprite hasCustomCollisionMask="false" image="p1_walk05.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="36.000000" y="48.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="97.000000" />
+                                                    <vertice x="0.000000" y="97.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                        <sprite hasCustomCollisionMask="false" image="p1_walk06.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="36.000000" y="48.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="97.000000" />
+                                                    <vertice x="0.000000" y="97.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                        <sprite hasCustomCollisionMask="false" image="p1_walk07.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="36.000000" y="48.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="0.000000" />
+                                                    <vertice x="72.000000" y="97.000000" />
+                                                    <vertice x="0.000000" y="97.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+            </objects>
+            <events>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="KeyPressed" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>a</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="PlatformBehavior::IsJumping" />
+                            <parameters>
+                                <parameter>player</parameter>
+                                <parameter>PlatformerObject</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>player</parameter>
+                                <parameter>&quot;Jump&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="true" value="PlatformBehavior::IsJumping" />
+                            <parameters>
+                                <parameter>player</parameter>
+                                <parameter>PlatformerObject</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>player</parameter>
+                                <parameter>&quot;Idle&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+            </events>
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData>
+                <behaviorSharedData name="Platform" type="PlatformBehavior::PlatformBehavior" />
+                <behaviorSharedData name="PlatformerObject" type="PlatformBehavior::PlatformerObjectBehavior" />
+            </behaviorsSharedData>
+        </layout>
+    </layouts>
+    <externalEvents />
+    <externalLayouts />
+    <externalSourceFiles />
+</project>
